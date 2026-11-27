@@ -1,0 +1,672 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: khaki;
+    overflow-x: hidden;
+    line-height: 1.5;
+}
+img,
+video {
+    max-width: 100%;
+}
+
+/*---------For Menu Button in Nav Bar--------*/
+
+.menu-btn {
+    position: fixed;
+    top: 20px;
+    left: 15px;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    color: white;
+    background: rgb(3, 66, 117);
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 10px;
+    cursor: pointer;
+    z-index: 100;
+    transition: 0.3s;
+}
+.menu-btn:hover {
+    background: rgb(20, 100, 155);
+    transform: scale(1.05);
+}
+
+/*---------For Side Bar--------*/
+
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    height: 100dvh;
+    padding: 35px 20px;
+    background: rgb(3, 66, 117);
+    position: fixed;
+    top: 0;
+    left: -250px;
+    transition: 0.35s ease;
+    z-index: 50;
+    box-shadow: 5px 0 20px rgba(0,0,0,0.2);
+    overflow-y: auto;
+}
+.sidebar.show {
+    left: 0;
+}
+
+/*---------For Logo-------- */
+
+.sidebar img {
+    width: 150px;
+    display: block;
+    margin: 35px auto 10px;
+}
+.logo-title {
+    color: white;
+    text-align: center;
+    font-family: Verdana;
+    font-size: 21px;
+    letter-spacing: 1px;
+    margin-bottom: 40px;
+}
+
+/*---------For Links in home page--------*/
+
+.links {
+    display: block;
+    padding: 14px 18px;
+    margin: 12px 0;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-family: Verdana;
+    font-size: 15px;
+    transition: 0.3s;
+    border-left: 4px solid transparent;
+}
+
+.links:hover {
+    color: rgb(3, 66, 117);
+    background-color: rgba(255,255,255,0.9);
+    padding-left: 23px;
+}
+
+
+/* -----Understanding body---- */
+
+.image {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    background: rgb(245,238,220);
+    margin: 50px 60px 30px;
+    padding: 30px;
+    border-radius: 18px;
+    border: 2px solid rgba(3,66,117,0.15);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* -----left side image--- */
+
+.image-side {
+    width: 40%;
+    min-width: 0;
+    position: sticky;
+    top: 30px;
+}
+.anatomy {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+video.anatomy {
+    width: 100%;
+    height: 320px;
+    object-fit: contain;
+    background-color: black;
+}
+
+/*-----Text On Right---- */
+
+.content-side {
+    width: 60%;
+    min-width: 0;
+}
+
+/*-----Main Intro---- */
+
+.ana-text {
+    margin-bottom: 25px;
+}
+.ana-text h2 {
+    text-align: center;
+    color: rgb(3,66,117);
+    font-size: 27px;
+    margin-bottom: 12px;
+}
+.ana-text h3 {
+    color: rgb(3,66,117);
+    font-size: 20px;
+    margin-bottom: 18px;
+}
+.ana-text p {
+    font-size: 16px;
+    line-height: 1.7;
+    text-align: justify;
+    color: rgb(51,52,52);
+}
+
+
+/* -----Male And Female Repro System--- */
+
+.male-system,
+.female-system {
+    margin-bottom: 25px;
+}
+.male-system h3,
+.female-system h3 {
+    color: rgb(3,66,117);
+    font-size: 19px;
+    margin-bottom: 10px;
+}
+.male-system p,
+.female-system p {
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 12px;
+    color: rgb(51,51,51);
+}
+.male-system h4,
+.female-system h4 {
+    margin-bottom: 10px;
+    color: rgb(51,51,51);
+}
+.male-system ul,
+.female-system ul {
+    padding-left: 22px;
+}
+.male-system li,
+.female-system li {
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 8px;
+    color: rgb(51,51,51);
+}
+
+/*-----Sex Ed Section---- */
+
+.sexed {
+    background-color: rgb(245,238,220);
+    margin: 50px 60px 30px;
+    padding: 30px;
+    border-radius: 18px;
+    border: 2px solid rgba(3,66,117,0.15);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* Sex Ed image */
+
+.simage {
+    width: 90%;
+    height: 300px;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 12px;
+    margin: 20px auto 25px;
+}
+
+
+/*-----Discussion---*/
+
+.sex-text {
+    margin-bottom: 25px;
+}
+.sex-text h2 {
+    text-align: center;
+    color: rgb(3,66,117);
+    font-size: 27px;
+    margin-bottom: 12px;
+}
+.sex-text h3 {
+    color: rgb(3,66,117);
+    font-size: 27px;
+    margin-bottom: 12px;
+}
+.sex-text p {
+    font-size: 16px;
+    line-height: 1.7;
+    text-align: justify;
+    color: rgb(51,51,51);
+}
+
+
+/*------Benefits Of Sex Ed---- */
+
+.straight h3 {
+    text-align: left;
+    color: rgb(3,66,117);
+    font-size: 27px;
+    margin-bottom: 12px;
+}
+.straight h5 {
+    color: rgb(4,109,122);
+    font-size: 18px;
+    margin-bottom: 18px;
+}
+.straight p {
+    font-size: 16px;
+    line-height: 1.7;
+    text-align: justify;
+    color: rgb(51,51,51);
+    margin-bottom: 12px;
+}
+/* ----benefit xards---- */
+
+.first,
+.second,
+.third,
+.fourth {
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    padding: 15px;
+    margin-bottom: 10px;
+}
+
+/* ----Myths And Misconceptions---*/
+
+.myths h3 {
+    text-align: left;
+    color: rgb(3,66,117);
+    font-size: 27px;
+    margin-bottom: 12px;
+}
+.myth1,
+.myth2,
+.myth3,
+.myth4 {
+    background: white;
+    font-family: Verdana;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    padding: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    border-radius: 10px;
+}
+hr {
+    border: none;
+    border-top: 1px solid rgb(16,112,201);
+    margin: 8px 0;
+}
+.false {
+    color: rgb(88,87,20);
+    text-align: left;
+    border-radius: 2px;
+    font-size: 20px;
+    font-family: Arial;
+    padding: 10px;
+}
+.true {
+    color: rgb(51,51,51);
+    font-size: 15px;
+    line-height: 1.7;
+    padding: 5px 10px;
+}
+
+/* -----Explore More Section----*/
+
+.below {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    gap: 30px;
+    background-color: rgb(245,238,220);
+    margin: 50px 60px 30px;
+    padding: 30px;
+    border-radius: 18px;
+    border: 2px solid rgba(3,66,117,0.15);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+/* ------Cards----*/
+.add,
+.added {
+    flex: 1;
+    min-width: 0;
+    border: 1px solid rgb(5,46,80);
+    border-radius: 15px;
+    padding: 22px;
+    overflow: hidden;
+    transition: 0.3s ease;
+    background: white;
+    text-align: center;
+}
+
+.add {
+    box-shadow: 0 5px 15px rgba(3,66,117,0.07);
+}
+.added {
+    box-shadow: 0 5px 15px rgba(3,66,117,0.07);
+}
+.add:hover,
+.added:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 9px 20px rgba(3,66,117,0.13);
+}
+
+/* -----Pregnancy and Sti Images--- */
+
+.preg,
+.sti {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    display: block;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 0 auto 15px;
+}
+.add a,
+.added a {
+    display: inline-block;
+    color: rgb(3,66,117);
+    font-size: 16px;
+    line-height: 1.5;
+    text-decoration: none;
+    font-weight: bold;
+}
+.add a:hover,
+.added a:hover {
+    text-decoration: underline;
+}
+
+
+/* -----Footer-----*/
+
+.footer {
+    background-color: rgb(3,66,117);
+    color: white;
+    text-align: center;
+    padding: 18px 15px;
+    font-size: 13px;
+    width: 100%;
+    margin-top: 50px;
+}
+
+
+/* Responsivenes */
+
+
+
+@media screen and (max-width: 768px) {
+
+    body {
+        font-size: 15px;
+    }
+    .menu-btn {
+        top: 15px;
+        left: 15px;
+    }
+    .sidebar {
+        width: 240px;
+        left: -240px;
+        padding: 25px 18px;
+    }
+    .sidebar.show {
+        left: 0;
+    }
+    .sidebar img {
+        width: 135px;
+    }
+
+    .image {
+        flex-direction: column;
+        margin: 80px 20px 25px;
+        padding: 20px;
+        gap: 20px;
+    }
+    .image-side {
+        width: 100%;
+        position: static;
+    }
+    .content-side {
+        width: 100%;
+    }
+    .anatomy {
+        width: 100%;
+        height: auto;
+    }
+    video.anatomy {
+        height: 300px;
+    }
+    .ana-text h2 {
+        font-size: 25px;
+    }
+    .ana-text h3 {
+        font-size: 19px;
+    }
+    /* ----Sex Ed---- */
+
+    .sexed {
+        margin: 30px 20px 25px;
+        padding: 20px;
+    }
+    .simage {
+        width: 100%;
+        height: 250px;
+        margin: 15px auto 20px;
+    }
+    .sex-text h2 {
+        font-size: 24px;
+    }
+    .sex-text h3 {
+        font-size: 22px;
+    }
+    /* BENEFITS */
+
+    .straight h3,
+    .myths h3 {
+        font-size: 23px;
+    }
+    .straight h5 {
+        font-size: 17px;
+    }
+    .straight p,
+    .sex-text p {
+        font-size: 15px;
+    }
+
+    /* ---Myths----*/
+
+    .false {
+        font-size: 17px;
+    }
+    .true {
+        font-size: 14px;
+    }
+
+    /* ----Explore Sec---- */
+
+    .below {
+        flex-direction: column;
+        align-items: stretch;
+        margin: 30px 20px;
+        padding: 20px;
+        gap: 20px;
+    }
+    .add,
+    .added {
+        width: 100%;
+        padding: 18px;
+    }
+    .preg,
+    .sti {
+        height: 200px;
+    }
+    /* ----footer---- */
+
+    .footer {
+        padding: 16px 12px;
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    .menu-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 22px;
+    }
+    .sidebar {
+        width: 220px;
+        left: -220px;
+    }
+    .image {
+        margin: 70px 12px 20px;
+        padding: 15px;
+        gap: 15px;
+    }
+    .anatomy {
+        border-radius: 8px;
+    }
+    video.anatomy {
+        height: 220px;
+    }
+    .ana-text h2,
+    .sex-text h2 {
+        font-size: 21px;
+    }
+    .ana-text h3,
+    .sex-text h3 {
+        font-size: 18px;
+    }
+    .ana-text p,
+    .sex-text p {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+    .male-system h3,
+    .female-system h3 {
+        font-size: 17px;
+    }
+    .male-system p,
+    .female-system p {
+        font-size: 14px;
+    }
+    .male-system li,
+    .female-system li {
+        font-size: 13px;
+    }
+    .sexed {
+        margin: 25px 12px 20px;
+        padding: 15px;
+    }
+    .simage {
+        width: 100%;
+        height: 190px;
+        margin: 10px auto 20px;
+    }
+    .straight h3,
+    .myths h3 {
+        font-size: 20px;
+    }
+    .straight h5 {
+        font-size: 16px;
+    }
+    .straight p {
+        font-size: 14px;
+    }
+    .first,
+    .second,
+    .third,
+    .fourth {
+        padding: 12px;
+    }
+    .false {
+        font-size: 15px;
+        padding: 7px;
+    }
+    .true {
+        font-size: 13px;
+    }
+    .below {
+        margin: 25px 12px;
+        padding: 15px;
+        gap: 15px;
+    }
+    .add,
+    .added {
+        padding: 12px;
+    }
+    .preg,
+    .sti {
+        height: 160px;
+    }
+    .add a,
+    .added a {
+        font-size: 14px;
+    }
+    .footer {
+        padding: 14px 10px;
+        font-size: 11px;
+        line-height: 1.5;
+        margin-top: 30px;
+    }
+}
+
+
+@media screen and (max-width: 360px) {
+
+    .image {
+        margin-left: 8px;
+        margin-right: 8px;
+        padding: 12px;
+    }
+    .sexed {
+        margin-left: 8px;
+        margin-right: 8px;
+        padding: 12px;
+    }
+    .below {
+        margin-left: 8px;
+        margin-right: 8px;
+        padding: 12px;
+    }
+    .ana-text h2,
+    .sex-text h2 {
+        font-size: 19px;
+    }
+    .ana-text h3,
+    .sex-text h3 {
+        font-size: 17px;
+    }
+    .straight h3,
+    .myths h3 {
+        font-size: 18px;
+    }
+    video.anatomy {
+        height: 190px;
+    }
+    .simage {
+        height: 160px;
+    }
+    .preg,
+    .sti {
+        height: 140px;
+    }
+    .footer {
+        font-size: 10px;
+    }
+}
